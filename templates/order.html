@@ -9,8 +9,7 @@
   <body>
     <div>
       {% set i =index | int %}
-      <p>{{ games[i].game_title }}</p>
-      <h1>Something</h1>
+      <p>Game Title: {{ games[i].game_title }}<br>Quantity Ordered: {{ games[i].quantity }}<br>Date Ordered: {{ games[i].order_date }}</p>
     </div>
   </body>
 </html>

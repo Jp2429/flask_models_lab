@@ -10,13 +10,14 @@
     <h1>Order List</h1>
     <ul>
       {% for game in games %}
-      <li>
-        <p>
-          {% set index = loop.index%} {% index -1 %}
-          <a href="orders/index">{{game.customer_name}}</a> - {{ game.game_title
-          }} - {{ game.quantity }} - {{ game.order_date }}
-        </p>
-      </li>
+        <li>
+          <p>
+            {% set index = loop.index-1%}
+            {# {% set index -1 %} #}
+            <a href="orders/{{index}}">{{game.customer_name}}</a> - {{ game.game_title
+            }} - {{ game.quantity }} - {{ game.order_date }}
+          </p>
+        </li>
       {% endfor %}
     </ul>
   </body>
